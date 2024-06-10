@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import theme from "./theme";
+import { ThemeProvider } from "@emotion/react";
+import { CssBaseline } from "@mui/material";
 
 // Type assertion to specify the element type
 const rootElement = document.getElementById("root") as HTMLElement;
@@ -11,7 +13,10 @@ if (rootElement) {
     const root = ReactDOM.createRoot(rootElement);
     root.render(
         <React.StrictMode>
-            <App />
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <App />
+            </ThemeProvider>
         </React.StrictMode>
     );
 }
