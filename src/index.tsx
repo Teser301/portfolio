@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import theme from "./theme";
 import { ThemeProvider } from "@emotion/react";
-import { CssBaseline } from "@mui/material";
+import theme from "./theme";
+import { BrowserRouter } from "react-router-dom";
+
+import App from "./App";
 
 // Type assertion to specify the element type
 const rootElement = document.getElementById("root") as HTMLElement;
@@ -13,10 +14,11 @@ if (rootElement) {
     const root = ReactDOM.createRoot(rootElement);
     root.render(
         <React.StrictMode>
-            <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <App />
-            </ThemeProvider>
+            <BrowserRouter>
+                <ThemeProvider theme={theme}>
+                    <App />
+                </ThemeProvider>
+            </BrowserRouter>
         </React.StrictMode>
     );
 }

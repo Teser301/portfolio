@@ -1,7 +1,7 @@
 import React from "react";
 import "../../assets/styles/base/navBar.scss";
 import { Box } from "@mui/material";
-
+import { Link } from "react-router-dom";
 const NavBar: React.FC = () => {
     return (
         <Box
@@ -13,10 +13,10 @@ const NavBar: React.FC = () => {
             }}
         >
             <Box className="navbar-left nav-item">
-                <span>Home</span>
+                <Link to="/">Home</Link>
             </Box>
             <Box className="navbar-right nav-item">
-                <span>Works</span>
+                <Link to="/works">Works</Link>
                 <span>Creative</span>
                 <span>About</span>
             </Box>
