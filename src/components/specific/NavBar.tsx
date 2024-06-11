@@ -8,7 +8,11 @@ const NavBar: React.FC = () => {
             className="navbar"
             sx={{
                 background: "#292929",
-                padding: "2rem 15rem",
+                padding: {
+                    xs: "2rem 5rem",
+                    sm: "2rem 10rem",
+                    md: "2rem 15rem",
+                },
                 margin: "0 auto",
             }}
         >

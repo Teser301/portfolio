@@ -12,7 +12,11 @@ const Home: React.FC = () => {
             <Box
                 sx={{
                     textAlign: "left",
-                    padding: "5rem 15rem",
+                    padding: {
+                        xs: "5rem 5rem",
+                        sm: "5rem 10rem",
+                        md: "5rem 15rem",
+                    },
                     paddingBottom: "45px",
                 }}
             >
