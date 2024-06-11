@@ -1,5 +1,4 @@
 import React from "react";
-import "../../assets/styles/base/navBar.scss";
 import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
 const NavBar: React.FC = () => {
@@ -14,12 +13,33 @@ const NavBar: React.FC = () => {
                     md: "2rem 15rem",
                 },
                 margin: "0 auto",
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
             }}
         >
-            <Box className="navbar-left nav-item">
+            <Box
+                sx={{
+                    display: "flex",
+                    fontSize: "18px",
+                    fontWeight: "bold",
+                    gap: "1rem",
+                    justifySelf: "flex-start",
+                }}
+            >
                 <Link to="/">Home</Link>
             </Box>
-            <Box className="navbar-right nav-item">
+            <Box
+                sx={{
+                    display: "flex",
+                    fontSize: "18px",
+                    fontWeight: "bold",
+                    gap: "1rem",
+                    justifySelf: {
+                        sm: "flex-start",
+                        md: "flex-end",
+                    },
+                }}
+            >
                 <Link to="/works">Works</Link>
                 <span>Creative</span>
                 <span>About</span>

@@ -1,9 +1,8 @@
-import React from "react";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-
+import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Home from "../../pages/Home";
 import Works from "../../pages/Works";
+import About from "../../pages/About";
 
 // Define AnimatedRoutes as a separate component without BrowserRouter
 function AnimatedRoutes() {
@@ -13,6 +12,7 @@ function AnimatedRoutes() {
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Home />} />
                 <Route path="/works" element={<Works />} />
+                <Route path="/about" element={<About />} />
             </Routes>
         </AnimatePresence>
     );
