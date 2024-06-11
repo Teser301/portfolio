@@ -4,7 +4,7 @@ import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "@emotion/react";
 import theme from "./theme";
 import { BrowserRouter } from "react-router-dom";
-
+import "./index.css";
 import App from "./App";
 
 // Type assertion to specify the element type
